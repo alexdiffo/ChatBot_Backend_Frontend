@@ -1,0 +1,151 @@
+.header{
+ display: flex;
+ flex-direction: row;
+ justify-content: space-between;
+ padding: 3px;
+ 
+ border-bottom: 2px solid lightgrey;
+ 
+}
+.cardre{
+    height:580px;
+    width:400px;
+    position:absolute;
+    bottom: 70px;
+    right: 20px;
+    border:1px solid lightgrey;
+    border-radius:20px;
+}
+.s12{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-top: 10px;
+     
+}
+.quick{
+    width:300px;
+    position: relative;
+    top: 350px;
+    left: 50px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    box-shadow: 5px 9px 9px #888888;
+    padding: 5px;
+}
+
+
+
+.yooo{
+    margin-bottom: 10px;
+   
+}
+
+/*.col-s1 {
+    text-align: left;
+}*/
+
+.col-s2 {
+    text-align: left;
+}
+
+.col_s10 {
+	padding: 8px;
+	background-color: #bdc3e7;
+	border-radius: 8px;
+}
+
+
+.col_s11 {
+	padding: 8px;
+	background-color:  #8995da;
+	border-radius: 8px;
+}
+
+.yooo .card-panel {
+	display: flex;
+  max-width: 500px;
+}
+
+.yooo .card-panel2 {
+	display: flex;
+	justify-content: end;
+  max-width: 500px;
+}
+
+
+
+.brand-logo{
+    margin-top: 30px;
+    margin-left: 20px;
+}
+
+.blod{
+  font-weight: bold;
+  font-family: 'Nunito';
+}
+
+.black-text1{
+    font-family: 'Nunito';
+    font-size: 18px;
+}
+
+
+.App {
+    background-color: white;
+  }
+  
+  .Auth-form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .Auth-form {
+    width: 420px;
+    box-shadow: rgb(0 0 0 / 16%) 1px 1px 10px;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    border-radius: 8px;
+    background-color: white;
+  }
+  
+  .Auth-form-content {
+    padding-left: 12%;
+    padding-right: 12%;
+  }
+  
+  .Auth-form-title {
+    text-align: center;
+    margin-bottom: 1em;
+    font-size: 24px;
+    color: rgb(34, 34, 34);
+    font-weight: 800;
+  }
+  
+  label {
+    font-size: 14px;
+    font-weight: 600;
+    color: rgb(34, 34, 34);
+  }
+
+  .centrer{
+   text-align: center;
+  }
+
+  .centrer1{
+    font-size: 70px;
+  }
+
+ .ko{
+   width: 30px;
+   height: 30px;
+   border-radius: 50%;
+ }
+
+ .cote{
+  padding-left: 104%;
+ }

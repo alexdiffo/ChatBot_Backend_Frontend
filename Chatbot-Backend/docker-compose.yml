@@ -1,0 +1,78 @@
+version: '3.5'
+
+services:
+  chatbot:
+    environment:
+      - SERVER_PORT=8080
+
+      - CASSANDRA_KEYSPACE=chat_bot
+      - CASSANDRA_PORT=9042
+      - CASSANDRA_CONTACT_POINTS=,seed_node, node
+
+    image: chatbot
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    ports:
+      - 8080:8081
+
+    restart: unless-stopped
+
+    networks:
+      - cassandra_network
+
+
+  cassandra:
+    image: "cassandra:3.0"
+    ports:
+      - "9042:9042"
+    restart: unless-stopped
+    networks:
+      - cassandra_network
+
+  seed_node:
+    image: "strapdata/elassandra"
+    environment:
+      - "JVM_OPTS=-Dcassandra.custom_query_handler_class=org.elassandra.index.ElasticQueryHandler"
+      - "MAX_HEAP_SIZE=1200m"
+      - "HEAP_NEWSIZE=300m"
+      - "CASSANDRA_CGROUP_MEMORY_LIMIT=true"
+      - "DEBUG=true"
+    cap_add:
+      - IPC_LOCK
+    ulimits:
+      memlock: -1
+    mem_limit: 2000m
+    ports:
+      - "9042:9042"
+      - "9200:9200"
+    networks:
+      - cassandra_network
+
+  node:
+    image: "strapdata/elassandra"
+    environment:
+      - "JVM_OPTS=-Dcassandra.custom_query_handler_class=org.elassandra.index.ElasticQueryHandler"
+      - "MAX_HEAP_SIZE=1200m"
+      - "HEAP_NEWSIZE=300m"
+      - "CASSANDRA_CGROUP_MEMORY_LIMIT=true"
+      - "CASSANDRA_SEEDS=seed_node"
+      - "DEBUG=true"
+    links:
+      - seed_node
+    cap_add:
+      - IPC_LOCK
+    ulimits:
+      memlock: -1
+    mem_limit: 2000m
+    ports:
+      - "9043:9042"
+      - "9201:9200"
+    networks:
+      - cassandra_network
+
+  
+networks:
+  cassandra_network:
+    name: cassandra_network
+    driver: bridge

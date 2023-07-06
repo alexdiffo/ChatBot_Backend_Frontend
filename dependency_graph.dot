@@ -1,0 +1,36 @@
+enspy.letsgo:Chatbot:jar:0.0.1-SNAPSHOT
++- org.springframework.boot:spring-boot-starter-actuator:jar:2.7.9:compile
+|  +- org.springframework.boot:spring-boot-starter:jar:2.7.9:compile
+|  |  \- org.springframework.boot:spring-boot-starter-logging:jar:2.7.9:compile
+|  \- org.springframework.boot:spring-boot-actuator-autoconfigure:jar:2.7.9:compile
+|     \- org.springframework.boot:spring-boot-actuator:jar:2.7.9:compile
++- org.springframework.boot:spring-boot-starter-data-cassandra:jar:2.7.9:compile
++- org.springframework.boot:spring-boot-starter-web:jar:2.7.9:compile
+|  +- org.springframework.boot:spring-boot-starter-json:jar:2.7.9:compile
+|  \- org.springframework.boot:spring-boot-starter-tomcat:jar:2.7.9:compile
++- org.springframework.boot:spring-boot-devtools:jar:2.7.9:runtime
+|  +- org.springframework.boot:spring-boot:jar:2.7.9:compile
+|  \- org.springframework.boot:spring-boot-autoconfigure:jar:2.7.9:compile
++- org.projectlombok:lombok:jar:1.18.26:compile
++- org.springframework.boot:spring-boot-starter-test:jar:2.7.9:test
+|  +- org.springframework.boot:spring-boot-test:jar:2.7.9:test
+|  \- org.springframework.boot:spring-boot-test-autoconfigure:jar:2.7.9:test
+\- org.apache.opennlp:opennlp-tools:jar:1.9.3:compile
+enspy.letsgo:Chatbot:jar:0.0.1-SNAPSHOT
++- org.springframework.boot:spring-boot-starter-actuator:jar:2.7.9:compile
+|  +- org.springframework.boot:spring-boot-starter:jar:2.7.9:compile
+|  |  \- org.springframework.boot:spring-boot-starter-logging:jar:2.7.9:compile
+|  \- org.springframework.boot:spring-boot-actuator-autoconfigure:jar:2.7.9:compile
+|     \- org.springframework.boot:spring-boot-actuator:jar:2.7.9:compile
++- org.springframework.boot:spring-boot-starter-data-cassandra:jar:2.7.9:compile
++- org.springframework.boot:spring-boot-starter-web:jar:2.7.9:compile
+|  +- org.springframework.boot:spring-boot-starter-json:jar:2.7.9:compile
+|  \- org.springframework.boot:spring-boot-starter-tomcat:jar:2.7.9:compile
++- org.springframework.boot:spring-boot-devtools:jar:2.7.9:runtime
+|  +- org.springframework.boot:spring-boot:jar:2.7.9:compile
+|  \- org.springframework.boot:spring-boot-autoconfigure:jar:2.7.9:compile
++- org.projectlombok:lombok:jar:1.18.26:compile
++- org.springframework.boot:spring-boot-starter-test:jar:2.7.9:test
+|  +- org.springframework.boot:spring-boot-test:jar:2.7.9:test
+|  \- org.springframework.boot:spring-boot-test-autoconfigure:jar:2.7.9:test
+\- org.apache.opennlp:opennlp-tools:jar:1.9.3:compile
